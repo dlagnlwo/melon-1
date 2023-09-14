@@ -158,19 +158,21 @@ function checkName() {
         // 여기에서 모든 필드의 유효성을 확인하고, 유효하지 않은 경우 회원가입 버튼을 비활성화
         const idCheckEl = document.getElementById('idCheck');
         const pwCheckEl = document.getElementById('pwCheck');
+        const nameCheckEl = document.getElementById('nameCheck');
         const emailCheckEl = document.getElementById('emailCheck');
         const birthCheckEl = document.getElementById('birthCheck');
         const phoneCheckEl = document.getElementById('phoneCheck');
 
         const idValid = idCheckEl.style.color === 'rgb(4, 230, 50)';
         const pwValid = pwCheckEl.style.color === 'rgb(4, 230, 50)';
+        const nameValid = nameCheckEl.style.color === 'rgb(4, 230, 50)';
         const emailValid = emailCheckEl.style.color === 'rgb(4, 230, 50)';
         const birthValid = birthCheckEl.style.color === 'rgb(4, 230, 50)';
         const phoneValid = phoneCheckEl.style.color === 'rgb(4, 230, 50)';
 
         const joinButton = document.getElementById('join_btn');
 
-        if (idValid && pwValid && emailValid && birthValid && phoneValid) {
+        if (idValid && pwValid && emailValid && birthValid && phoneValid && nameValid) {
             joinButton.disabled = false; // 유효한 경우 버튼 활성화
         } else {
             joinButton.disabled = true; // 하나 이상의 필드가 유효하지 않은 경우 버튼 비활성화
